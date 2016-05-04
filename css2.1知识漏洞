@@ -1,0 +1,27 @@
+一、权重计算 
+1、a,b,c,d组成四位数 abcd
+行内style  a=1
+id         b=1
+伪类，类，属性选择器 c=1
+元素，伪元素 d=1
+:not  否定伪类里的选择器计入计算，但是否定伪类本身不计入计算；
+
+二、margin篇
+margin 对行内不可置换元素 在垂直方向上不起作用；
+
+普通流中块元素相邻的垂直方向margin有可能发生折叠；
+margin 折叠条件：
+1、普调流中的块级元素，且属于同一个BFC;
+2、两个margin之间没有行内元素，clearance,padding和border隔开
+3、 父元素和第一个子元素margin-top发生折叠；
+    父元素和最后一个子元素margin-bottom折叠，父元素height:auto;
+    元素bttom和相邻元素top发生折叠
+    没有形成BFC的块元素本身top,margin发生折叠，min-height:0,height:auto/0,无流内子元素；
+    
+BFC:块格式化上下文
+浮动元素，绝对定位，块容器如：display:inline-block, table-cells.table-caption不是块盒子，
+块盒子属性为overflow:hidden的时候形成新的BFC
+margin值为两者中绝对值最大的那一个
+    
+    
+
